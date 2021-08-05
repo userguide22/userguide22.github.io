@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <img class="mb-4" src="img/blackbox-logo-reverse-white.png" />
+            <h1 class="font-weight-bold text-white animated fadeInDown">
+              How did the residents of Hong Kong vote in 2019 District Council
+              Election?
+            </h1>
+            <h4 class="text-white p-1 animated fadeIn">
+              An analysis of the voting factors and city sentiment
+            </h4>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="mt-5 p-3 text-center">
+        <!-- <h2
+          class="font-weight-bold text-white text-center mt-5 animated fadeIn delay-1s"
+        >
+          Some sample heading go here
+        </h2> -->
+        <p class="text-white text-left">
+          The 2019 Hong Kong District Council elections were held on 24 November
+          2019, six months after multiple rounds of widespread protests
+          triggered by the introduction of the Fugutive Offenders amendment
+          bill.
+          <br /><br />Election results saw 388 of the 452 District Council seats
+          returning a pro-democracy candidate. While pro-democracy voters feel
+          galvanised by the result, most are sceptical about the future.
+          Post-election, their mood can be best summarised as “savouring victory
+          today as the road ahead will be tough”. <br /><br />Here at Blackbox
+          Research, in conjunction with the South China Morning Post, we decided
+          to look deeper into the underlying sentiments beneath this
+          unprecedented election result.
+        </p>
+      </div>
+    </div>
+
+    <!-- Carousell -->
+    <div class="container-fluid">
+      <h4
+        class="font-weight-bold text-white text-center mt-5 p-3 animated fadeIn"
+      >
+        Top 5 reasons for voting in the 2019 District Council Elections
+      </h4>
+      <p class="text-white text-center m-3">
+        (Click on the legend below to interact with the chart)
+      </p>
+      <div class="mb-5 chart">
+        <canvas id="chart1"></canvas>
+      </div>
+      <!-- <div
+        id="myCarousel"
+        class="carousel slide"
+        data-interval="false"
+        data-ride="carousel"
+      >
+        <!-- Carousel indicators -->
+      <!-- <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol> -->
+      <!-- Wrapper for carousel items -->
+      <!-- <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="mb-5 chart">
+                <canvas id="chart1"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="mb-5 chart">
+                <canvas id="chart2"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="mb-5 chart">
+                <canvas id="chart3"></canvas>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      <!-- Carousel controls -->
+      <!-- <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div> -->
+    </div>
+
+    <div class="container">
+      <div class="mt-5 p-3 text-center">
+        <!-- <h2
+          class="font-weight-bold text-white text-center mt-5 animated fadeIn delay-1s"
+        >
+          Some sample heading go here
+        </h2> -->
+        <p class="text-white text-left">
+          While the pro-democracy camp is clearly catalysed by clear ambitions
+          for the future of Hong Kong and its relationship with China (53%),
+          analysis of voting determinants reveals those voters were also drawn
+          together by police conduct towards the protesters (49%). This was the
+          second biggest vote driver and, indeed, may have been the decisive
+          factor that contributed to the blow out result on election day.<br /><br />In
+          contrast, pro-establishment voters say they voted to speak out against
+          the ongoing violence (36%) as well as to express their views about the
+          current protests (23%).
+        </p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div
+        class="parallax-window img-fluid"
+        data-parallax="scroll"
+        data-image-src="img/on-the-streets.jpg"
+      ></div>
+    </div>
+
+    <div class="container">
+      <div class="mt-5 p-3 text-center">
+        <h2 class="font-weight-bold text-white text-center mt-5">
+          A Deep Dive into Protest Factors
+        </h2>
+        <p class="text-white text-left m-3">
+          As the key factor influencing the choice of Hong Kongers' votes,
+          attitudes towards the protests turned out to be polarising and
+          divisive. Voters in the pro-democracy camp were more likely to support
+          the protest and its tactices, while the pro-establishment counterparts
+          were more likely to oppose it.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <h4 class="font-weight-bold text-white text-center mt-5 animated fadeIn">
+        Have you taken part in any protests?
+      </h4>
+      <div class="row justify-content-center p-4">
+        <ul class="nav justify-content-center nav-pills p-1 mb-4">
+          <li class="nav-item">
+            <a href="#allrespondents" class="nav-link active" data-toggle="tab"
+              >All Respondents</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#prodemocracy" class="nav-link" data-toggle="tab"
+              >Pro-Democracy</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#proestablishment" class="nav-link" data-toggle="tab"
+              >Pro-Establishment</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="allrespondents">
+            <img class="img-fluid" src="img/all-respondents@2x.png" />
+          </div>
+          <div class="tab-pane fade" id="prodemocracy">
+            <img class="img-fluid" src="img/pro-democracy@2x.png" />
+          </div>
+          <div class="tab-pane fade" id="proestablishment">
+            <img class="img-fluid" src="img/pro-establishment@2x.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="mt-5 p-3 text-center">
+        <p class="text-white text-left">
+          As it stands, 24% of Hong Kongers claimed to have taken part in a
+          protest before. This figure stands at 42% for those who are
+          pro-democracy and 8% for those who are pro-establishment.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <h4 class="font-weight-bold text-white text-center m-4 animated fadeIn">
+        Support for protest tactics
+      </h4>
+      <div class="row justify-content-center">
+        <ul class="nav justify-content-center nav-pills p-1 mb-4">
+          <li class="nav-item">
+            <a href="#laserpens" class="nav-link active" data-toggle="tab"
+              >Using laser pens on police officers</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#blockmtr" class="nav-link" data-toggle="tab"
+              >Blocking the MTR</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#blockroad" class="nav-link" data-toggle="tab"
+              >Blocking major roads</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#damagepublic" class="nav-link" data-toggle="tab"
+              >Damage public property</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#throwbricks" class="nav-link" data-toggle="tab"
+              >Throwing petrol bombs or bricks</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="laserpens">
+            <img class="img-fluid" src="img/laser-pens@2x-100.jpg" />
+          </div>
+          <div class="tab-pane fade" id="blockmtr">
+            <img class="img-fluid" src="img/block-mtr@2x-100.jpg" />
+          </div>
+          <div class="tab-pane fade" id="blockroad">
+            <img class="img-fluid" src="img/block-roads@2x-100.jpg" />
+          </div>
+          <div class="tab-pane fade" id="damagepublic">
+            <img class="img-fluid" src="img/damage-public@2x-100.jpg" />
+          </div>
+          <div class="tab-pane fade" id="throwbricks">
+            <img class="img-fluid" src="img/throwing-bricks@2x-100.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="mt-5 p-3 text-center">
+        <p class="text-white text-left">
+          Diving deeper into the protest tactics deployed, Hong Kongers were
+          more likely to support non-violent methods such as using laser pens on
+          police officers (35%), blocking the MTR (27%) or major roads (27%).<br /><br />Damaging
+          public property was mostly frowned upon, as only 19% of all
+          respondents expressed support, compared to 32% in the pro-democracy
+          camp.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <h4 class="font-weight-bold text-white text-center m-4 animated fadeIn">
+        Which outcome do you prefer with regards to the protests?
+      </h4>
+      <div class="row justify-content-center">
+        <ul class="nav justify-content-center nav-pills p-1 mb-4">
+          <li class="nav-item text-center">
+            <a
+              href="#protestscontinue"
+              class="nav-link active"
+              data-toggle="tab"
+              >Protests continue till<br />"Five Demands" are met</a
+            >
+          </li>
+          <li class="nav-item text-center">
+            <a href="#tougheraction" class="nav-link" data-toggle="tab"
+              >Authorities take tougher<br />action to stop protests</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="protestscontinue">
+            <img class="img-fluid" src="img/protest-continue@2x-100.jpg" />
+          </div>
+          <div class="tab-pane fade" id="tougheraction">
+            <img class="img-fluid" src="img/tougher-actions@2x-100.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="mt-5 p-3 text-center">
+        <p class="text-white text-left">
+          When asked on their preferred outcome with regards to the protests,
+          24% of Hong Kongers would rather the protests continue, while 14%
+          expressed support for tougher actions to stop the ongoing unrest.<br /><br />When
+          viewed along partisan lines, more than 4 in 10 pro-democracy Hong
+          Kongers hoped the protests will continue till the "Five Demands" are
+          met. On the other hand, 1 in 4 pro-establishment Hong Kongers believe
+          in taking tougher actions from the authorities.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div
+        class="parallax-window img-fluid"
+        data-parallax="scroll"
+        data-image-src="img/end-violence.jpg"
+      ></div>
+    </div>
+
+    <div class="container">
+      <div class="mt-5 p-3 text-center">
+        <h2
+          class="font-weight-bold text-white text-center m-4 animated fadeIn delay-1s"
+        >
+          Attitudes Towards Police Actions
+        </h2>
+        <p class="text-white text-left">
+          Attitudes towards the police loom large in the survey results. Trust
+          has clearly eroded with 45% of democrat leaning voters saying they now
+          have zero trust in the HK police, while 84% characterise police action
+          as harsh.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <h4 class="font-weight-bold text-white text-center m-5 animated fadeIn">
+        I have lost all trust in the police
+      </h4>
+      <div class="row justify-content-center">
+        <ul class="nav justify-content-center nav-pills mb-4">
+          <li class="nav-item">
+            <a href="#trustall" class="nav-link active" data-toggle="tab"
+              >All Respondents</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#trustdemocracy" class="nav-link" data-toggle="tab"
+              >Pro-Democracy</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#trustestablishment" class="nav-link" data-toggle="tab"
+              >Pro-Establishment</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="trustall">
+            <img class="img-fluid" src="img/zero-trust-all@2x.png" />
+          </div>
+          <div class="tab-pane fade" id="trustdemocracy">
+            <img class="img-fluid" src="img/zero-trust-democracy@2x.png" />
+          </div>
+          <div class="tab-pane fade" id="trustestablishment">
+            <img class="img-fluid" src="img/zero-trust-establishment@2x.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <h4 class="font-weight-bold text-white text-center m-4 animated fadeIn">
+        Police actions towards the protesters were...
+      </h4>
+      <div class="row justify-content-center">
+        <ul class="nav justify-content-center nav-pills p-1 mb-4">
+          <li class="nav-item">
+            <a href="#tooharsh" class="nav-link active" data-toggle="tab"
+              >Too harsh</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#adequate" class="nav-link" data-toggle="tab">Adequate</a>
+          </li>
+          <li class="nav-item">
+            <a href="#toolenient" class="nav-link" data-toggle="tab"
+              >Too lenient</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="tooharsh">
+            <img class="img-fluid" src="img/too-harsh@2x-100.jpg" />
+          </div>
+          <div class="tab-pane fade" id="adequate">
+            <img class="img-fluid" src="img/adequate@2x-100.jpg" />
+          </div>
+          <div class="tab-pane fade" id="toolenient">
+            <img class="img-fluid" src="img/too-lenient@2x-100.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="mt-5 p-3 text-center">
+        <p class="text-white text-left">
+          More than 1 in 2 Hong Kongers felt the police actions towards the
+          protesters were too harsh. This figure obviously stands out among the
+          pro-democracy voters (84%). Even those in the opposite camp (26%)
+          deemed the police behaviours as excessive.<br /><br />Democrat-leaning
+          voters almost universally support demands for an independent
+          commission to investigate police actions (93%) and even 44% of
+          pro-establishment voters support such a commission.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div
+        class="parallax-window img-fluid"
+        data-parallax="scroll"
+        data-image-src="img/do-something.jpg"
+      ></div>
+    </div>
+
+    <div class="container">
+      <div class="mt-5 p-3 text-center">
+        <h2
+          class="font-weight-bold text-white text-center mt-5 animated fadeIn delay-1s"
+        >
+          Future of Hong Kong?
+        </h2>
+        <p class="text-white text-left">
+          Despite the election result, Hong Kong voters appear to be in a sober
+          frame of mind about the future. Few are optimistic about any
+          short-term resolution and many believe worse may be to come. Moreover,
+          outside intervention and support is not necessarily seen as carrying
+          any real benefit.
+          <br /><br />Most acknowledge this is their fight to win or lose and
+          there appears to be a strong resolve to stick to what their intentions
+          have always been – retaining the autonomy promised under the one
+          country, two systems framework. And add to that - holding the police
+          accountable.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <h4 class="font-weight-bold text-white text-center m-5 animated fadeIn">
+        What is the most likely future outcome for Hong Kong?
+      </h4>
+      <div class="row justify-content-center">
+        <ul class="nav justify-content-center nav-pills p-1 mb-4">
+          <li class="nav-item">
+            <a
+              href="#givein"
+              class="nav-link active text-center"
+              data-toggle="tab"
+              >Authorities give in<br />to protesters' demands</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#dialogue" class="nav-link text-center" data-toggle="tab"
+              >A dialogue takes <br />place at some point</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#defeated" class="nav-link text-center" data-toggle="tab"
+              >Protesters defeated and things<br />go back to way they were
+              before</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#crackdown" class="nav-link text-center" data-toggle="tab"
+              >Protesters defeated with a<br />crackdown to prevent this
+              again</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="givein">
+            <img class="img-fluid" src="img/authorities-give-in@2x-100.jpg" />
+          </div>
+          <div class="tab-pane fade" id="dialogue">
+            <img class="img-fluid" src="img/dialogue@2x-100.jpg" />
+          </div>
+          <div class="tab-pane fade" id="defeated">
+            <img
+              class="img-fluid"
+              src="img/defeated-same-as-before@2x-100.jpg"
+            />
+          </div>
+          <div class="tab-pane fade" id="crackdown">
+            <img class="img-fluid" src="img/crackdown@2x-100.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="mt-5 p-3 text-center">
+        <p class="text-white text-left">
+          Holding a realistic view on the situation, only 11% of Hong Kongers
+          believe the authorities will give in to protester's demands. Having a
+          dialogue some time down the road is the preferred middle ground chosen
+          by 4 in 10 Hong Kongers. This option was also selected by 49% of those
+          in the pro-democracy camp and 35% in the pro-establishment camp.<br /><br />Still,
+          some Hong Kongers hold the pessimistic view that a crackdown on
+          protesters will take place, with strongarm actions enforced to prevent
+          such incidents from happening again.<br /><br /><br />
+        </p>
+      </div>
+    </div>
+
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <a href="https://blackbox.com.sg"
+          ><img
+            id="logo"
+            src="img/blackbox-logo-reverse-white.png"
+            class="mb-2"
+        /></a>
+      </div>
+      <div
+        id="logo"
+        class="container text-center text-white mt-1 position-relative"
+      >
+        Interested to read more about this study? <br />Email us at
+        <a href="mailto:comms@blackbox.com.sg">comms@blackbox.com.sg</a>
+      </div>
+    </footer>
+
+    <!-- Load dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+    <script src="js/parallax.js"></script>
+  </body>
+</html>
