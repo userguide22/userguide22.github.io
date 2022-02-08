@@ -15,277 +15,6 @@ var isInViewPort = function (checkForThis) {
   );
 };
 
-// Pick your elements
-var inputs = Array.from(document.querySelectorAll('.btn'));
-
-// chart.js global options
-Chart.plugins.unregister(ChartDataLabels); // Unregister data labels for chart.js
-Chart.defaults.global.tooltips.yPadding = 10;
-Chart.defaults.global.tooltips.xPadding = 14;
-Chart.defaults.global.title.fontSize = 24;
-Chart.defaults.global.title.fontColor = '#fff';
-Chart.defaults.global.title.padding = 30;
-Chart.defaults.global.legend.labels.fontColor = '#fff';
-Chart.defaults.scale.gridLines.color = '#555';
-Chart.defaults.scale.ticks.fontColor = '#fff';
-Chart.defaults.global.maintainAspectRatio = false;
-Chart.defaults.global.responsive = true;
-Chart.defaults.global.animation.duration = 750;
-Chart.defaults.scale.gridLines.color = '#222';
-
-// chart.js add padding below legend, comes before creating chart
-Chart.Legend.prototype.afterFit = function() {
-  this.height = this.height + 30;
-};
-
-var chart1Canvas = document.getElementById("chart1").getContext("2d");
-// var chart2Canvas = document.getElementById("chart2").getContext("2d");
-// var chart3Canvas = document.getElementById("chart3").getContext("2d");
-// var chart4Canvas = document.getElementById("chart4").getContext("2d");
-// var chart5Canvas = document.getElementById("chart5").getContext("2d");
-// var chart6Canvas = document.getElementById("chart6").getContext("2d");
-// var chart7Canvas = document.getElementById("chart7").getContext("2d");
-
-
-var chart1AllRespondents = {
-  label: 'All respondents',
-  data: [33, 28, 26, 26, 26],
-  backgroundColor: '#434343',
-  // borderColor: 'rgba(0, 99, 132, 1)',
-};
-
-var chart1proDemocracy = {
-  label: 'Pro-democracy',
-  data: [53, 49, 30, 39, 15],
-  backgroundColor: '#ffcb3e',
-  // hidden: true
-  // borderColor: 'rgba(99, 132, 0, 1)',
-};
-
-var chart1proEstablishment = {
-  label: 'Pro-establishment',
-  data: [15, 8, 23, 14, 36],
-  backgroundColor: '#3a88fe',
-  hidden: true
-  // borderColor: 'rgba(99, 132, 0, 1)',
-};
-
-var chart1Male = {
-  label: 'Males',
-  data: [32, 31, 26, 25, 25],
-  backgroundColor: '#081F5B',
-  // hidden: true
-  // borderColor: 'rgba(99, 132, 0, 1)',
-};
-
-var chart1Female = {
-  label: 'Females',
-  data: [34, 25, 26, 26, 27],
-  backgroundColor: '#D2356B',
-  // hidden: true
-  // borderColor: 'rgba(99, 132, 0, 1)',
-};
-
-var chart1Under45 = {
-  label: 'Under 45 yos',
-  data: [41, 31, 28, 30, 22],
-  backgroundColor: '#8073CA',
-  // hidden: true
-  // borderColor: 'rgba(99, 132, 0, 1)',
-};
-
-var chart1Over45 = {
-  label: '45 yos and above',
-  data: [26, 25, 24, 22, 30],
-  backgroundColor: '#761969',
-  // hidden: true
-  // borderColor: 'rgba(99, 132, 0, 1)',
-};
-
-// var chart4protested = {
-//   label: 'Yes, I have taken part in protests',
-//   data: [24, 42, 8, 29, 20, 35, 16],
-//   backgroundColor: ['#434343', '#3a88fe', '#ffcb3e', '#081F5B', '#D2356B', '#8073CA', '#761969']
-//   // hidden: true
-//   // borderColor: 'rgba(99, 132, 0, 1)',
-// };
-
-// var chart5AllRespondents = {
-//   label: 'All respondents',
-//   data: [35, 27, 27, 24, 19, 18, 18],
-//   backgroundColor: '#434343',
-//   // borderColor: 'rgba(0, 99, 132, 1)',
-// };
-
-// var chart5proDemocracy = {
-//   label: 'Pro-democracy',
-//   data: [58, 46, 45, 42, 32, 31, 30],
-//   backgroundColor: '#3a88fe',
-//   // hidden: true
-//   // borderColor: 'rgba(99, 132, 0, 1)',
-// };
-
-// var chart5proEstablishment = {
-//   label: 'Pro-establishment',
-//   data: [14, 9, 11, 10, 7, 7, 8],
-//   backgroundColor: '#ffcb3e',
-//   hidden: true
-//   // borderColor: 'rgba(99, 132, 0, 1)',
-// };
-
-// var chart5Male = {
-//   label: 'Males',
-//   data: [37, 28, 28, 26, 21, 21, 20],
-//   backgroundColor: '#081F5B',
-//   // hidden: true
-//   // borderColor: 'rgba(99, 132, 0, 1)',
-// };
-
-// var chart5Female = {
-//   label: 'Females',
-//   data: [34, 27, 25, 24, 17, 17, 17],
-//   backgroundColor: '#D2356B',
-//   // hidden: true
-//   // borderColor: 'rgba(99, 132, 0, 1)',
-// };
-
-// var chart5Under45 = {
-//   label: 'Under 45 yos',
-//   data: [45, 42, 39, 37, 29, 27, 25],
-//   backgroundColor: '#8073CA',
-//   // hidden: true
-//   // borderColor: 'rgba(99, 132, 0, 1)',
-// };
-
-// var chart5Over45 = {
-//   label: '45 yos and above',
-//   data: [27, 15, 16, 15, 11, 12, 13],
-//   backgroundColor: '#761969',
-//   // hidden: true
-//   // borderColor: 'rgba(99, 132, 0, 1)',
-// };
-
-var chart1Data = {
-  labels: [['Pro-democracy', 'for Hong Kong'], ['To protest against', 'police conduct'], ['To express my', 'views about the', 'current protests'], ['To express my',  'views about how', 'Hong Kong is', 'governed'], ['I am against', 'the violence that', 'is happening']],
-  datasets: [chart1AllRespondents, chart1proDemocracy, chart1proEstablishment]
-};
-
-// var chart2Data = {
-//   labels: [['Pro-democracy', 'for Hong Kong'], ['To protest against', 'police conduct'], ['To express my', 'views about the', 'current protests'], ['To express my',  'views about how', 'Hong Kong is', 'governed'], ['I am against', 'the violence that', 'is happening']],
-//   datasets: [chart1AllRespondents, chart1Male, chart1Female]
-// };
-
-// var chart3Data = {
-//   labels: [['Pro-democracy', 'for Hong Kong'], ['To protest against', 'police conduct'], ['To express my', 'views about the', 'current protests'], ['To express my',  'views about how', 'Hong Kong is', 'governed'], ['I am against', 'the violence that', 'is happening']],
-//   datasets: [chart1AllRespondents, chart1Under45, chart1Over45]
-// };
-
-// var chart4Data = {
-//   labels: ['All Respondents', 'Pro-democracy', 'Pro-establishment', 'Male', 'Female', 'Under 45 yos', '45 yos and above'],
-//   datasets: [chart4protested]
-// };
- 
-// var chart5Data = {
-//   labels: [['Using laser pens', 'against the police', 'and authorities'], ['Blocking MTR'], ['Blocking major roads'], ['Damaging private', 'property, including', 'mainland businesses'], ['Damaging public', 'property, such as MTR,', 'university, etc.'], ['Throwing petrol', 'bombs and bricks'], ['Attacking opponents']],
-//   datasets: [chart5AllRespondents, chart5proDemocracy, chart5proEstablishment]
-// };
-
-// var chart6Data = {
-//   labels: [['Using laser pens', 'against the police', 'and authorities'], ['Blocking MTR'], ['Blocking major roads'], ['Damaging private', 'property, including', 'mainland businesses'], ['Damaging public', 'property, such as MTR,', 'university, etc.'], ['Throwing petrol', 'bombs and bricks'], ['Attacking opponents']],
-//   datasets: [chart5AllRespondents, chart5Male, chart5Female]
-// };
-
-// var chart7Data = {
-//   labels: [['Using laser pens', 'against the police', 'and authorities'], ['Blocking MTR'], ['Blocking major roads'], ['Damaging private', 'property, including', 'mainland businesses'], ['Damaging public', 'property, such as MTR,', 'university, etc.'], ['Throwing petrol', 'bombs and bricks'], ['Attacking opponents']],
-//   datasets: [chart5AllRespondents, chart5Under45, chart5Over45]
-// };
-
-var chartOptions = {
-  responsive: true,
-  tooltips: {
-    mode: 'label',
-    callbacks: {
-      title: () => null,
-      label: function (tooltipItems, data) {
-        return data.datasets[tooltipItems.datasetIndex].label +': ' + tooltipItems.xLabel + '%';
-      }
-    },
-  },
-    // title: {
-  //   display: true,
-  //   text: 'Reasons for voting in the 2019 District Council Elections'
-  // },
-  responsive: true,
-  scales: {
-    xAxes: [{
-      ticks: {
-        suggestedMin: 0
-      }
-    }],
-    yAxes: [{
-      ticks: {
-        suggestedMin: 0
-      }
-    }]
-  }
-};
-
-var chart1 = new Chart(chart1Canvas, {
-  type: 'horizontalBar',
-  data: chart1Data,
-  options: chartOptions
-});
-
-// var chart2 = new Chart(chart2Canvas, {
-//   type: 'horizontalBar',
-//   data: chart2Data,
-//   options: chartOptions
-// });
-
-// var chart3 = new Chart(chart3Canvas, {
-//   type: 'horizontalBar',
-//   data: chart3Data,
-//   options: chartOptions
-// });
-
-// var chart4 = new Chart(chart4Canvas, {
-//   type: 'horizontalBar',
-//   data: chart4Data,
-//   options: {
-//     legend: {
-//       display: false,
-//     },
-//     responsive: true,
-//     // tooltips: {
-//     //   mode: 'label',
-//     //   callbacks: {
-//     //     title: () => null,
-//     //     label: function (tooltipItems, data) {
-//     //       return data.datasets[tooltipItems.datasetIndex].label +': ' + tooltipItems.yLabel + '%';
-//     //     }
-//     //   },
-//     // },
-//   }
-// });
-
-// var chart5 = new Chart(chart5Canvas, {
-//   type: 'horizontalBar',
-//   data: chart5Data,
-//   options: chartOptions
-// });
-
-// var chart6 = new Chart(chart6Canvas, {
-//   type: 'horizontalBar',
-//   data: chart6Data,
-//   options: chartOptions
-// });
-
-// var chart7 = new Chart(chart7Canvas, {
-//   type: 'horizontalBar',
-//   data: chart7Data,
-//   options: chartOptions
-// });
-
 // Flash website on load
 window.onload = function() {
   document.body.className += ' loaded'
@@ -296,3 +25,83 @@ $(document).on('click', '.btn', function() {
   $(this).siblings().removeClass('active')
   $(this).addClass('active');
 });
+
+
+// Change color of navbar upon scrolling
+$(window).scroll(function(){
+  var scroll = $(window).scrollTop();
+  if(scroll < 20)
+  {
+      $('.fixed-top').css('background', 'transparent');
+  } else{
+      $('.fixed-top').css('background', 'rgb(25, 25, 25, 0.95)');
+  }
+});
+
+// Set nav backround color on mobile view
+if (window.matchMedia('(max-width: 991px)').matches)
+{
+  $('.fixed-top').css('background', 'rgb(25, 25, 25, 0.95)');
+}
+
+// add padding top to show content behind navbar
+// $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
+
+// detect scroll top or down
+if ($('.smart-scroll').length > 0) { // check if element exists
+    var last_scroll_top = 0;
+    $(window).on('scroll', function() {
+        scroll_top = $(this).scrollTop();
+        if(scroll_top < last_scroll_top) {
+            $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
+        }
+        else {
+            $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
+        }
+        last_scroll_top = scroll_top;
+    });
+}
+
+// Scroll to top
+$(document).ready(function(){
+	$(window).scroll(function () {
+			if ($(this).scrollTop() > 50) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+		// scroll body to 0px on click
+		$('#back-to-top').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
+});
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("modalNewclose")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
