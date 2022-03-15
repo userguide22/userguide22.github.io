@@ -289,7 +289,7 @@ function sortAgencies(){
         sortScore = ['agency'];
         sortAscending = true;
     }
-    sortScore = [sortingClassName,'agency'];
+    // sortScore = [sortingClassName,'agency'];
     $('.agencies__wrapper').isotope({ sortBy: sortScore,sortAscending:sortAscending });
 }
 function updateAgencyScoreBackground(){
