@@ -22,7 +22,7 @@
         "groups":{
             "all":{
                 "dataKey": "All",
-                "label": "All S'poreans"
+                "label": "All Singaporeans"
             },
             "youth":{
                 "dataKey": "Youth",
