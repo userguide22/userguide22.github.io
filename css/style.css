@@ -61,7 +61,7 @@ h2 {
   text-shadow: 0px 0px 8px #222;
   padding-top: 40px;
   padding-bottom: 20px;
-  color: #0e9bfa;
+  color: #00b392;
   text-align: left;
   font-size: 40px;
 }
@@ -74,7 +74,7 @@ h4 {
   text-shadow: 0px 0px 8px #222;
   padding-top: 40px;
   padding-bottom: 20px;
-  color: #0e9bfa;
+  color: #00b392;
   text-align: left;
 }
 
@@ -277,7 +277,7 @@ label {
 /* Interactive element */
 
 .psei-title__container {
-  color: #9966ff;
+  color: #00b392;
   font-size: 40px;
   text-align: center;
   padding: 30px;
@@ -343,7 +343,7 @@ align-items: center; */
 
 .agencies__item:hover {
   cursor: pointer;
-  background-color: #3967ead1;
+  background-color: #00b392;
 }
 
 .agencies__item--label {
@@ -355,7 +355,7 @@ align-items: center; */
 }
 .agencies__item--label .item__points {
   font-size: 35px;
-  background-color: #0e9bfa;
+  background-color: #00b392;
   color: #fbfbfb;
   width: 100%;
   text-align: center;
