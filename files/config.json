@@ -26,11 +26,11 @@
             },
             "youth":{
                 "dataKey": "Youth",
-                "label": "Youth"
+                "label": "Youths"
             },
             "middle-age":{
                 "dataKey": "Middle-Age",
-                "label": "Middle Age"
+                "label": "Middle-Aged"
             },
             "seniors":{
                 "dataKey": "Seniors",
